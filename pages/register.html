@@ -1,0 +1,343 @@
+<html>
+
+<head>
+	<link rel="shortcut icon" href="../src/images/favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" type="text/css" href="../src/styles/global-styles.css" />
+	<link rel="stylesheet" type="text/css" href="../src/styles/ddsmoothmenu/ddsmoothmenu.css" />
+	<link rel="stylesheet" type="text/css" href="../src/javascript/jQuery/colorbox/colorbox.css" />
+	<link rel="stylesheet" type="text/css" href="../src/styles/gritter/jquery.gritter.css" />
+</head>
+
+<body>
+	<table class="main-table-frame">
+		<tbody>
+			<tr class="main-table-frame-dark">
+				<td class="main-table-frame-first-bar" colspan="2">
+					<img src="../src/images/coykillericon-50-38.png" />
+					OWASP Mutillidae II: Keep Calm
+					and Pwn On
+				</td>
+			</tr>
+			<tr class="main-table-frame-dark">
+				<td class="main-table-frame-second-bar" colspan="2">
+					Version: 2.8.78
+					<span>Security Level: 5
+						(Secure)</span>
+					<span>Hints: Disabled</span>
+					<span>Not Logged In</span>
+				</td>
+			</tr>
+			<tr class="main-table-frame-menu-bar">
+				<td class="main-table-frame-menu-bar" colspan="2">
+					<menu-center></menu-center>
+				</td>
+			</tr>
+			<tr>
+				<td class="main-table-frame-left">
+					<menu-left></menu-left>
+				</td>	
+				<td class="main-table-frame-right">
+					<!-- Begin Content -->
+
+					<div class="page-title">
+						Register for an Account
+					</div>
+
+					<div style="margin: 5px">
+						<span style="
+									font-weight: bold;
+									margin-right: 50px;
+								">
+							<a id="back-button-anchor">
+								<img src="../src/images/back-button-64-64.png" alt="Go Back" align="middle" />
+								&nbsp;
+								Back
+							</a>
+						</span>
+						<span style="
+									white-space: nowrap;
+									font-weight: bold;
+								" title="Click here to see the primary goal of this page. (Additional vulnerabilities will exist on a page)">
+							<a href="./includes/pop-up-help-context-generator.php?pagename=register.php"
+								class="colorbox cboxElement" title="Help me with page register.php" style="
+										color: #000000;
+									">
+								<img alt="Help Me!" src="../src/images/help-easy-button-48-48.png" align="middle" />
+								Help Me!
+							</a>
+						</span>
+					</div>
+					<script nonce="">
+						document.addEventListener(
+							"DOMContentLoaded",
+							function () {
+								document.getElementById(
+									"back-button-anchor"
+								).addEventListener(
+									"click",
+									function () {
+										document.location.href =
+											"index.php\x3Fpage\x3Dhome.php";
+									}
+								);
+							}
+						);
+					</script>
+					<div class="hint-wrapper-header" id="idHintWrapperHeader" title="Click to open this section"
+						style="display: none" ;="">
+						<img id="idHintWrapperHeaderImage" style="
+									padding-right: 5px;
+								" alt="Expand Hints" src="../src/images/down_arrow_16_16.png" align="left" />
+						Hints and Videos
+					</div>
+					<div id="idHintWrapperBody" class="hint-wrapper-body" style="display: none"></div>
+
+					<script type="text/javascript">
+						var lValidateInput =
+							"TRUE";
+
+						function onSubmitOfForm(
+								/*HTMLFormElement*/ theForm
+						) {
+							try {
+								if (
+									lValidateInput ==
+									"TRUE"
+								) {
+									var lUnsafeCharacters =
+										/[`~!@#$%^&*()-_=+\[\]{}\\|;':",./<>?]/;
+									if (
+										theForm
+											.username
+											.value
+											.length >
+										15 ||
+										theForm
+											.password
+											.value
+											.length >
+										15
+									) {
+										alert(
+											"Username too long. We dont want to allow too many characters.\n\nSomeone might have enough room to enter a hack attempt."
+										);
+										return false;
+									} // end if
+
+									if (
+										theForm.username.value.search(
+											lUnsafeCharacters
+										) >
+										-1 ||
+										theForm.password.value.search(
+											lUnsafeCharacters
+										) >
+										-1
+									) {
+										alert(
+											"Dangerous characters detected. We can't allow these. This all powerful blacklist will stop such attempts.\n\nMuch like padlocks, filtering cannot be defeated.\n\nBlacklisting is l33t like l33tspeak."
+										);
+										return false;
+									} // end if
+								} // end if(lValidateInput)
+
+								return true;
+							} catch (e) {
+								alert(
+									"Error: " +
+									e.message
+								);
+							} // end catch
+						} // end function onSubmitOfLoginForm(/*HTMLFormElement*/ theForm)
+							//-->
+					</script>
+
+					<span>
+						<a style="
+									text-decoration: none;
+									cursor: pointer;
+								" href="./webservices/rest/ws-user-account.php">
+							<img style="
+										vertical-align: middle;
+									" src="../src/images/ajax_logo-75-79.jpg" width="78px" height="75px" />
+							<span style="
+										font-weight: bold;
+									">Switch
+								to
+								RESTful
+								Web
+								Service
+								Version
+								of this
+								Page</span>
+						</a>
+					</span>
+
+					<div id="id-registration-form-div">
+						<form action="index.php?page=register.php" method="post"
+							enctype="application/x-www-form-urlencoded" onsubmit="return onSubmitOfForm(this);">
+							<input name="csrf-token" type="hidden"
+								value="CU7znm3phoZh/9HMoBi0/L1rl31XPU2jdNzSGMTI7+UxllQTUB6d/PQuO0v9vZ20DeINZDKUDHdd8M1ZsmpEjg==" />
+							<table>
+								<tbody>
+									<tr>
+										<td>
+											&nbsp;
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2" class="form-header">
+											Please
+											choose
+											your
+											username,
+											password
+											and
+											signature
+										</td>
+									</tr>
+									<tr>
+										<td>
+											&nbsp;
+										</td>
+									</tr>
+									<tr>
+										<td class="label">
+											Username
+										</td>
+										<td>
+											<input type="text" name="username" size="15" autofocus="autofocus"
+												minlength="1" maxlength="15" required="required" />
+										</td>
+									</tr>
+									<tr>
+										<td class="label">
+											Password
+										</td>
+										<td>
+											<input type="password" name="password" size="15" minlength="1"
+												maxlength="15" required="required" />
+											&nbsp;
+											<a href="index.php?page=password-generator.php&amp;username=anonymous"
+												target="_blank">Password
+												Generator</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="label">
+											Confirm
+											Password
+										</td>
+										<td>
+											<input type="password" name="confirm_password" size="15" minlength="1"
+												maxlength="15" required="required" />
+										</td>
+									</tr>
+									<tr>
+										<td class="label">
+											Signature
+										</td>
+										<td>
+											<textarea rows="3" cols="50" name="my_signature" minlength="1"
+												maxlength="100" required="required"></textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											&nbsp;
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2" style="
+													text-align: center;
+												">
+											<input name="register-php-submit-button" class="button" type="submit"
+												value="Create Account" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											&nbsp;
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</form>
+					</div>
+
+					<!-- End Content -->
+				</td>
+			</tr>
+			<tr class="main-table-frame-dark">
+				<td colspan="2">
+					Browser:
+					䵯穩汬愯㔮〠⡘ㄱ㬠啢畮瑵㬠䱩湵砠砸㙟㘴㬠牶㨹㠮〩⁇散歯⼲〱〰㄰ㄠ䙩牥景砯㤸⸰
+					<br />
+					PHP Version: Not Available
+					(Secure mode doesn't reveal the
+					server version)
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div id="cboxOverlay" style="display: none"></div>
+	<div id="colorbox" class="" style="
+				display: none;
+				padding-bottom: 42px;
+				padding-right: 42px;
+			">
+		<div id="cboxWrapper">
+			<div>
+				<div id="cboxTopLeft" style="float: left"></div>
+				<div id="cboxTopCenter" style="float: left"></div>
+				<div id="cboxTopRight" style="float: left"></div>
+			</div>
+			<div style="clear: left">
+				<div id="cboxMiddleLeft" style="float: left"></div>
+				<div id="cboxContent" style="float: left">
+					<div id="cboxLoadedContent" style="
+								width: 0px;
+								height: 0px;
+								overflow: hidden;
+								float: left;
+							"></div>
+					<div id="cboxTitle" style="float: left"></div>
+					<div id="cboxCurrent" style="float: left"></div>
+					<div id="cboxNext" style="float: left"></div>
+					<div id="cboxPrevious" style="float: left"></div>
+					<div id="cboxSlideshow" style="float: left"></div>
+					<div id="cboxClose" style="float: left"></div>
+				</div>
+				<div id="cboxMiddleRight" style="float: left"></div>
+			</div>
+			<div style="clear: left">
+				<div id="cboxBottomLeft" style="float: left"></div>
+				<div id="cboxBottomCenter" style="float: left"></div>
+				<div id="cboxBottomRight" style="float: left"></div>
+			</div>
+		</div>
+		<div style="
+					position: absolute;
+					width: 9999px;
+					visibility: hidden;
+					display: none;
+				"></div>
+	</div>
+	<script src="../src/javascript/jQuery/jquery.js"></script>
+	<script src="../src/javascript/jQuery/colorbox/jquery.colorbox-min.js"></script>
+	<script src="../src/javascript/ddsmoothmenu/ddsmoothmenu.js"></script>
+	<script src="../src/javascript/gritter/jquery.gritter.min.js"></script>
+	<script src="../src/javascript/hints/hints-menu.js"></script>
+	<script src="../src/javascript/inline-initializers/jquery-init.js"></script>
+	<script src="../src/javascript/inline-initializers/ddsmoothmenu-init.js"></script>
+	<script src="../src/javascript/inline-initializers/populate-web-storage.js"></script>
+	<script src="../src/javascript/inline-initializers/gritter-init.js"></script>
+	<script src="../src/javascript/inline-initializers/hints-menu-init.js"></script>
+	<!-- Web components -->
+	<script src="../src/javascript/componentes/menu-center.js"></script>
+	<script src="../src/javascript/componentes/menu-left.js"></script>
+</body>
+
+</html>

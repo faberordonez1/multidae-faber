@@ -1,0 +1,234 @@
+<html>
+
+<head>
+	<link rel="shortcut icon" href="./../src/images/favicon.ico" type="image/x-icon">
+
+	<link rel="stylesheet" type="text/css" href="../src/styles/global-styles.css" />
+	<link rel="stylesheet" type="text/css" href="../src/styles/ddsmoothmenu/ddsmoothmenu.css" />
+	<link rel="stylesheet" type="text/css" href="../src/javascript/jQuery/colorbox/colorbox.css" />
+	<link rel="stylesheet" type="text/css" href="../src/styles/gritter/jquery.gritter.css" />
+</head>
+
+<body>
+	<table class="main-table-frame">
+		<tbody>
+			<tr class="main-table-frame-dark">
+				<td class="main-table-frame-first-bar" colspan="2">
+					<img src="../src/images/coykillericon-50-38.png">
+					OWASP Mutillidae II: Keep Calm and Pwn On
+				</td>
+			</tr>
+			<tr class="main-table-frame-dark">
+				<td class="main-table-frame-second-bar" colspan="2">
+					Version: 2.8.78 <span>Security Level: 1 (Client-Side Security)</span>
+					<span>Hints: Enabled</span>
+					<span>Not Logged In</span>
+				</td>
+			</tr>
+			<tr class="main-table-frame-menu-bar">
+				<td class="main-table-frame-menu-bar" colspan="2">
+					<menu-center></menu-center>
+				</td>
+			</tr>
+			<tr>
+				<td class="main-table-frame-left">
+					<menu-left></menu-left>
+				</td>
+				<td class="main-table-frame-right">
+					<!-- Begin Content -->
+
+
+					<script>
+						var DeleteCapturedData = function () {
+							if (window.confirm("Please confirm all captured data should be deleted")) {
+								document.location = "index.php?page=captured-data.php&deleteLogs=deleteLogs";
+							};
+						};
+					</script>
+
+					<div class="page-title">Captured Data</div>
+
+
+					<div style="margin: 5px;">
+						<span style="font-weight: bold; margin-right: 50px;">
+							<a id="back-button-anchor">
+								<img src="./../src/images/back-button-64-64.png" alt="Go Back" align="middle">
+								&nbsp;
+								Back
+							</a>
+						</span>
+						<span style="white-space: nowrap; font-weight: bold;"
+							title="Click here to see the primary goal of this page. (Additional vulnerabilities will exist on a page)">
+							<a href="./includes/pop-up-help-context-generator.php?pagename=captured-data.php"
+								class="colorbox cboxElement" title="Help me with page captured-data.php"
+								style="color: #000000;">
+								<img alt="Help Me!" src="./../src/images/help-easy-button-48-48.png" align="middle">
+								Help Me!
+							</a>
+						</span>
+					</div>
+					<script nonce="">
+						document.addEventListener('DOMContentLoaded', function () {
+							document.getElementById('back-button-anchor').addEventListener('click',
+								function () {
+									document.location.href = 'https://127.0.0.1/mutillidae-master/index.php?page=show-log.html';
+								});
+						});
+					</script>
+					<div class="hint-wrapper-header" id="idHintWrapperHeader" title="Click to open this section"
+						style="display: block" ;="">
+						<img id="idHintWrapperHeaderImage" style="padding-right: 5px;" alt="Expand Hints"
+							src="./../src/images/down_arrow_16_16.png" align="left">
+						Hints and Videos
+					</div>
+					<div id="idHintWrapperBody" class="hint-wrapper-body" style="display: none;">
+						<div class="hint-header"><img src="../src/images/link-icon-16-16.png"
+								style="margin-right: 5px;"><a class="hint-header"
+								href="hints-page-wrapper.php?level1HintIncludeFile=12"
+								title="Click to open HTML Injection (HTMLi) hint in new tab" target="_blank">HTML
+								Injection (HTMLi)</a></div>
+						<div class="hint-header"><img src="../src/images/link-icon-16-16.png"
+								style="margin-right: 5px;"><a class="hint-header"
+								href="hints-page-wrapper.php?level1HintIncludeFile=56"
+								title="Click to open Using Burp-Suite hint in new tab" target="_blank">Using
+								Burp-Suite</a></div>
+						<div class="hint-header"><img src="../src/images/link-icon-16-16.png"
+								style="margin-right: 5px;"><a class="hint-header"
+								href="hints-page-wrapper.php?level1HintIncludeFile=59"
+								title="Click to open Using OWASP Zed Attack Proxy (ZAP) hint in new tab"
+								target="_blank">Using OWASP Zed Attack Proxy (ZAP)</a></div>
+						<div class="hint-header"><img src="../src/images/link-icon-16-16.png"
+								style="margin-right: 5px;"><a class="hint-header"
+								href="hints-page-wrapper.php?level1HintIncludeFile=11"
+								title="Click to open Cross-site Scripting (XSS) hint in new tab"
+								target="_blank">Cross-site Scripting (XSS)</a></div>
+						<div class="hint-header"><img src="../src/images/link-icon-16-16.png"
+								style="margin-right: 5px;"><a class="hint-header"
+								href="hints-page-wrapper.php?level1HintIncludeFile=55"
+								title="Click to open Cross-site Scripting with BeEF Framework hint in new tab"
+								target="_blank">Cross-site Scripting with BeEF Framework</a></div>
+					</div>
+					<!-- BEGIN HTML OUTPUT  -->
+					<table style="margin-left:auto; margin-right:auto; width: 600px;">
+						<tbody>
+							<tr>
+								<td class="form-header">Captured Data Page</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>
+									This page shows the data captured by page <a
+										href="index.php?page=capture-data.php">capture-data.php</a>.
+									There should also be a file with the same data since capture-data.php tries to save
+									the data to a table
+									and a file. The table contents are being displayed on this page. On this system, the
+									file should be found in /opt/lampp/htdocs/mutillidae-master.
+									The database table is named captured_data.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<span title="Click to refresh captured data log" onclick="document.location.reload(true);"
+						style="cursor: pointer;margin-right:35px;font-weight: bold;">
+						<img src="./../src/images/refresh-button-48px-by-48px.png" style="vertical-align:middle;"
+							width="32px" height="32px">
+						Refresh
+					</span>
+					<span
+						title="Click to delete captured data log. This deletes the database table only. The text file is not affected."
+						onclick="DeleteCapturedData();" style="margin-right:35px;cursor: pointer;font-weight: bold;">
+						<img src="./../src/images/delete-icon-48-48.png" style="vertical-align:middle;" width="32px"
+							height="32px">
+						Delete Capured Data
+					</span>
+					<span title="Click to visit capture data page. Your data will be captured."
+						onclick="document.location='./index.php?page=capture-data.php';"
+						style="cursor: pointer;font-weight: bold;">
+						<img src="./../src/images/spider-in-web-48-48.png" style="vertical-align:middle;" width="32px"
+							height="32px">
+						Capture Data
+					</span>
+					<br>
+
+					<table class="results-table" width="100%" border="1px;">
+						<tbody>
+							<tr class="report-header">
+								<td colspan="7">0 captured records found</td>
+							</tr>
+							<tr class="report-header">
+								<td>Hostname</td>
+								<td>Client IP Address</td>
+								<td>Client Port</td>
+								<td>User Agent</td>
+								<td>Referrer</td>
+								<td>Data</td>
+								<td>Date/Time</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- I think the database password is set to blank or perhaps samurai.
+			It depends on whether you installed this web app from irongeeks site or
+			are using it inside Kevin Johnsons Samurai web testing framework.
+			It is ok to put the password in HTML comments because no user will ever see
+			this comment. I remember that security instructor saying we should use the
+			framework comment symbols (ASP.NET, JAVA, PHP, Etc.)
+			rather than HTML comments, but we all know those
+			security instructors are just making all this up. -->
+					<!-- End Content -->
+				</td>
+			</tr>
+			<tr class="main-table-frame-dark">
+				<td colspan="2">
+					Browser: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0 <br>
+					PHP Version: 8.1.4 </td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div id="cboxOverlay" style="display: none;"></div>
+	<div id="colorbox" class="" style="display: none; padding-bottom: 42px; padding-right: 42px;">
+		<div id="cboxWrapper">
+			<div>
+				<div id="cboxTopLeft" style="float: left;"></div>
+				<div id="cboxTopCenter" style="float: left;"></div>
+				<div id="cboxTopRight" style="float: left;"></div>
+			</div>
+			<div style="clear: left;">
+				<div id="cboxMiddleLeft" style="float: left;"></div>
+				<div id="cboxContent" style="float: left;">
+					<div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div>
+					<div id="cboxTitle" style="float: left;"></div>
+					<div id="cboxCurrent" style="float: left;"></div>
+					<div id="cboxNext" style="float: left;"></div>
+					<div id="cboxPrevious" style="float: left;"></div>
+					<div id="cboxSlideshow" style="float: left;"></div>
+					<div id="cboxClose" style="float: left;"></div>
+				</div>
+				<div id="cboxMiddleRight" style="float: left;"></div>
+			</div>
+			<div style="clear: left;">
+				<div id="cboxBottomLeft" style="float: left;"></div>
+				<div id="cboxBottomCenter" style="float: left;"></div>
+				<div id="cboxBottomRight" style="float: left;"></div>
+			</div>
+		</div>
+		<div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div>
+	</div>
+	<script src="../src/javascript/jQuery/jquery.js"></script>
+	<script src="../src/javascript/jQuery/colorbox/jquery.colorbox-min.js"></script>
+	<script src="../src/javascript/ddsmoothmenu/ddsmoothmenu.js"></script>
+	<script src="../src/javascript/gritter/jquery.gritter.min.js"></script>
+	<script src="../src/javascript/hints/hints-menu.js"></script>
+	<script src="../src/javascript/inline-initializers/jquery-init.js"></script>
+	<script src="../src/javascript/inline-initializers/ddsmoothmenu-init.js"></script>
+	<script src="../src/javascript/inline-initializers/populate-web-storage.js"></script>
+	<script src="../src/javascript/inline-initializers/gritter-init.js"></script>
+	<script src="../src/javascript/inline-initializers/hints-menu-init.js"></script>
+	<!-- Web components -->
+	<script src="../src/javascript/componentes/menu-center.js"></script>
+	<script src="../src/javascript/componentes/menu-left.js"></script>
+</body>
+
+</html>

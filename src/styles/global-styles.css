@@ -1,0 +1,260 @@
+/* Global */
+/* ------------------------------------------------- */
+
+html{
+	--fondo-dark:#1c2230;
+	--fondo-dark2:#181e2a;
+	--fondo-dark3:#0c1524;
+	--font-light:#fefffd;
+	--font-secondary:#42b3d1;
+	--secondary2:#61e0d8;
+}
+/*Estilos Faber*/
+body{
+	font-family: 'Roboto','Open Sans',sans-serif, tahoma, verdana, serif;
+	background-color: var(--fondo-dark);
+	color: var(--font-light);
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+* a{
+	color: var(--font-light);
+	text-decoration:none;
+
+}
+header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+header > div{
+	display: flex;
+	align-items: center;
+}
+header > div > img{
+	width: 50px;
+	height: 38px;
+	filter: drop-shadow(2px 1px 3px var(--font-light));
+}
+nav{
+	border-radius: 17px;
+	background-color: var(--fondo-dark2);
+	background:  var(--fondo-dark2);
+	box-shadow:  5px 5px 9px #0f1219,
+	-5px -5px 9px #293247;
+}
+nav ul{
+	display: flex;
+	padding: 0px;
+	margin: 0;
+}
+nav ul li{
+	border-radius: 17px;
+	list-style: none;
+    padding: 10px 12px;
+}
+nav ul li:hover{
+	height: 100%;
+	border-radius: 17px;
+	background-color: var(--fondo-dark2);
+	background:  var(--fondo-dark2);
+	box-shadow:  inset 5px 5px 9px #0f1219,
+	inset -5px -5px 9px #293247;
+	cursor: pointer;
+}
+nav li:hover a{
+	color: var(--font-secondary);
+}
+.container{
+	margin: auto;
+	width: 100%;
+	max-width:1000px;
+	display: inherit;
+	align-items: inherit;
+	justify-content: inherit;
+	flex-direction: inherit;
+}
+.head-version{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	gap:10px
+}
+.hero-index{
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+	margin: 3rem 0;
+}
+.hero-index > div{
+	width: 33%;
+	height: 100px;
+	flex-shrink:1;
+
+	/*Efecto Neumorphism.io*/
+	border-radius: 17px;
+	background-color: var(--fondo-dark2);
+	background:  var(--fondo-dark2);
+	box-shadow:  5px 5px 9px #0f1219,
+	-5px -5px 9px #293247;
+}
+.hero-index >div >a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	height: 100%;
+	font-size: 20px;
+}
+.hero-index >div:hover{
+	background-color: var(--fondo-dark);
+	border-radius: 17px;
+	border-top: solid var(--font-secondary) 1px;
+	border-left: solid var(--font-secondary) 1px;
+}
+.hero-index >div >a> i{
+	font-size: 4rem;
+	color: var(--font-secondary);
+}
+footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background:var(--fondo-dark3);
+	min-height: 14rem;
+}
+footer > div > div{
+	width: 23%;
+	margin-left: 30px;
+	height: auto;
+}
+.footer-col-1{
+	display: flex;
+	flex-direction: column;
+	gap:10px;
+	justify-content: center;
+	align-items: center;
+	min-height: 200px;
+
+	/* Efecto Neumorphism */
+	position: relative;
+	border-radius: 17px;
+	background-color: transparent;
+	box-shadow:  5px 5px 9px #0f1219,
+	-5px -5px 9px #293247;
+	z-index: 100;/*Se invierte el orden para evitar anulacion click*/
+}
+.footer-col-1:after{
+	content: '';
+	position: absolute;
+	width: 90%;
+	height: 90%;
+	border-radius: 17px;
+	background-color: var(--fondo-dark3);
+	box-shadow:  inset 5px 5px 9px #0f1219,
+	inset -5px -5px 9px #293247;
+	z-index: -1;
+}
+.btn-donar{
+	background-color:var(--font-secondary);
+	border-radius: 35px;
+	padding: 0.4rem 1.5rem;
+}
+.btn-donar:hover{
+	border-radius: 17px;
+	color: var(--font-light);
+	background-color: var(--secondary2);
+	border-block-end: solid var(--font-secondary) 1px;
+	border-inline-end: solid var(--font-secondary) 1px;
+	}
+.footer-col-2{
+	gap: 10px;
+    display: flex;
+    flex-direction: column;
+	gap:10px;
+}
+.footer-col-2 i{
+	font-size: 1.4rem;
+	color: var(--font-secondary);
+	margin-inline-end: .7rem;
+}
+.footer-menu li{
+	list-style: none;
+	line-height:1.8rem;
+}
+footer a:hover{
+	color: var(--font-secondary);
+}
+.footer-menu2 ul{
+	margin-block-start: 0;
+}
+.footer-copy{
+	background-color: var(--font-secondary);
+	color: var(--fondo-dark);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 10px 0;
+}
+.hero-login{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.hero-login .icons{
+	width: 100%;
+}
+.hero-login .icons > div{
+	width: 30%;
+}
+.hero-login form{
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	border-color: var(--fondo-dark2);
+	border: var(--font-secondary) solid 2px;
+	border-radius:35px ;
+	padding:2rem;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+.hero-login input[type="text"],input[type="password"]{
+	font-size: 1rem;
+	background: transparent;
+    padding: 1rem;
+    border: transparent;
+    border-bottom: 1px solid var(--font-secondary);
+	color: var(--font-light);
+	outline: none;
+}
+.hero-login input[type="submit"]{
+	font-size: 1rem;
+	font-weight: 700;
+	margin-top: 1rem;
+	border-radius: 35px;
+	padding: .8rem;
+	border-color: var(--font-secondary);
+	background-color:var(--font-secondary);
+	cursor: pointer;
+}
+.hero-login input[type="submit"]:hover{
+	border-color: var(--secondary2);
+}
+.hero-login input::placeholder { 
+	color: var(--font-light); 
+}
+.hero-login i{
+	font-size: 5rem;
+}
+.hero-login a{
+	color:var(--font-secondary);
+	font-weight: 500;
+}
+.hero-login form a:hover{
+	color:var(--secondary2);
+	text-decoration: underline;
+}
