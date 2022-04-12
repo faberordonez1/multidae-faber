@@ -17,8 +17,8 @@ class menuCenter extends HTMLElement{
             </ul>
         </nav>`;
 
-        let menuOthers =  `<nav>
-        <ul>
+        let menuOthers =  `
+        <nav><ul>
             <li><a href='../index.html'>Home</a></li>
             <li><a href="login.html">Login/Register</a></li>
             <li><a href="inlogin.html">Toggle Security</a></li>
@@ -33,9 +33,11 @@ class menuCenter extends HTMLElement{
         var rutaAbsoluta = self.location.href;   
 		var posicionUltimaBarra = rutaAbsoluta.lastIndexOf("/");
 		var rutaRelativa = rutaAbsoluta.substring( posicionUltimaBarra + "/".length , rutaAbsoluta.length );
-        
-        rutaRelativa ==='index.html'? this.innerHTML = menuHome : this.innerHTML = menuOthers;
-        
+        if(rutaRelativa === '' || rutaRelativa ==='index.html'){
+            this.innerHTML = menuHome
+        }else{
+            this.innerHTML = menuOthers;
+        }
     }
 }
 
