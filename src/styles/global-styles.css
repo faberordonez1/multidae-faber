@@ -1,16 +1,16 @@
 /* Global */
 /* ------------------------------------------------- */
 
-html{
-	--fondo-dark:#1c2230;
+html{/*Declaraacción de variables*/
+	--fondo-dark:#1c2230; 
 	--fondo-dark2:#181e2a;
 	--fondo-dark3:#0c1524;
 	--font-light:#fefffd;
 	--font-secondary:#42b3d1;
 	--secondary2:#61e0d8;
 }
-/*Estilos Faber*/
-body{
+
+body{/*Se apllica fuente importada y se usan variables*/
 	font-family: 'Roboto','Open Sans',sans-serif, tahoma, verdana, serif;
 	background-color: var(--fondo-dark);
 	color: var(--font-light);
@@ -257,4 +257,20 @@ footer a:hover{
 .hero-login form a:hover{
 	color:var(--secondary2);
 	text-decoration: underline;
+}
+.hero .instructions a{
+	display: flex;
+	gap: 10px;
+}
+.hero .instructions a i{
+    color: var(--font-secondary);
+	font-size: 2.5rem;
+}
+.hero .instructions h3{
+	display: inline-flex;
+	border-radius: 10PX;
+	padding: 12px;
+	margin-top: 3rem;
+	background-color: var(--font-secondary);
+	color: var(--fondo-dark);
 }

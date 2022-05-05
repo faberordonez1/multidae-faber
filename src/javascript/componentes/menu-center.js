@@ -9,8 +9,7 @@ class menuCenter extends HTMLElement{
             <ul>
                 <li><a href='index.html'>Home</a></li>
                 <li><a href="pages/login.html">Login/Register</a></li>
-                <li><a href="pages/inlogin.html">Toggle Security</a></li>
-                <li><a href="index.html">Enforce TLS</a></li>
+                <li><a href="pages/instruccion.html">Intruccions</a></li>
                 <li><a href="pages/set-up-database.html">Reset DB</a></li>
                 <li><a href="pages/show-log.html">View Log</a></li>
                 <li><a href="pages/captured-data.html">View Captured Data</a></li>
@@ -21,8 +20,7 @@ class menuCenter extends HTMLElement{
         <nav><ul>
             <li><a href='../index.html'>Home</a></li>
             <li><a href="login.html">Login/Register</a></li>
-            <li><a href="inlogin.html">Toggle Security</a></li>
-            <li><a href="../index.html">Enforce TLS</a></li>
+            <li><a href="instruccion.html">Intruccions</a></li>
             <li><a href="set-up-database.html">Reset DB</a></li>
             <li><a href="show-log.html">View Log</a></li>
             <li><a href="captured-data.html">View Captured Data</a></li>

@@ -1,785 +1,241 @@
 <html>
 
 <head>
-	<link rel="shortcut icon" href="../src/images/favicon.ico" type="image/x-icon" />
-
-	<link rel="stylesheet" type="text/css" href="../src/styles/global-styles.css" />
-	<link rel="stylesheet" type="text/css" href="../src/styles/ddsmoothmenu/ddsmoothmenu.css" />
-	<link rel="stylesheet" type="text/css" href="../src/javascript/jQuery/colorbox/colorbox.css" />
-	<link rel="stylesheet" type="text/css" href="../src/styles/gritter/jquery.gritter.css" />
+	<link rel="shortcut icon" href="../src/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../src/styles/global-styles.css">
+	<link rel="stylesheet" type="text/css" href="../src/styles/ddsmoothmenu/ddsmoothmenu.css">
+	<link rel="stylesheet" type="text/css" href="../src/javascript/jQuery/colorbox/colorbox.css">
+	<link rel="stylesheet" type="text/css" href="../src/styles/gritter/jquery.gritter.css">
+	<script src="https://kit.fontawesome.com/6e524d64bb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-	<table class="main-table-frame">
-		<tbody>
-			<tr class="main-table-frame-dark">
-				<td class="main-table-frame-first-bar" colspan="2">
-					<img src="../src/images/coykillericon-50-38.png" />
-					OWASP Mutillidae II: Keep Calm
-					and Pwn On
-				</td>
-			</tr>
-			<tr class="main-table-frame-dark">
-				<td class="main-table-frame-second-bar" colspan="2">
-					Version: 2.8.78
-					<span>Security Level: 5
-						(Secure)</span>
-					<span>Hints: Disabled</span>
-					<span>Not Logged In</span>
-				</td>
-			</tr>
-			<tr class="main-table-frame-menu-bar">
-				<td class="main-table-frame-menu-bar" colspan="2">
-					<menu-center></menu-center>
-				</td>
-			</tr>
-			<tr>
-				<td class="main-table-frame-left">
-					<menu-left></menu-left>
-				</td>	
-
-				<td class="main-table-frame-right">
-					<!-- Begin Content -->
-
-					<div class="page-title">
-						Usage Instructions
-					</div>
-
-					<div style="margin: 5px">
-						<span style="
-									font-weight: bold;
-									margin-right: 50px;
-								">
-							<a id="back-button-anchor">
-								<img src="../src/images/back-button-64-64.png" alt="Go Back" align="middle" />
-								&nbsp;
-								Back
-							</a>
-						</span>
-						<span style="
-									white-space: nowrap;
-									font-weight: bold;
-								" title="Click here to see the primary goal of this page. (Additional vulnerabilities will exist on a page)">
-							<a href="./includes/pop-up-help-context-generator.php?pagename=documentation/usage-instructions.php"
-								class="colorbox cboxElement"
-								title="Help me with page documentation/usage-instructions.php" style="
-										color: #000000;
-									">
-								<img alt="Help Me!" src="../src/images/help-easy-button-48-48.png" align="middle" />
-								Help Me!
-							</a>
-						</span>
-					</div>
-					<script nonce="">
-						document.addEventListener(
-							"DOMContentLoaded",
-							function () {
-								document.getElementById(
-									"back-button-anchor"
-								).addEventListener(
-									"click",
-									function () {
-										document.location.href =
-											"index.php\x3Fpage\x3Dhome.php";
-									}
-								);
-							}
-						);
-					</script>
-					<table>
-						<tbody>
-							<tr>
-								<td style="
-											width: 800px;
-										">
-									Mutillidae
-									implements
-									vulnerabilities
-									from
-									the
-									<a href="http://www.owasp.org/index.php/OWASP_Top_Ten_Project" target="_blank">OWASP
-										Top
-										10</a>
-									2013,
-									2010
-									and
-									2007
-									in
-									PHP.
-									Additionally
-									vulnerabilities
-									from
-									the
-									SANS
-									Top
-									25
-									Programming
-									Errors
-									and
-									select
-									information
-									disclosure
-									vulnerabilities
-									have
-									been
-									added
-									on
-									various
-									pages.
-									<br /><br /><br />
-									<span class="report-header">Optional
-										Configuration</span>
-									<br /><br />
-									Instructional
-									videos
-									are
-									available
-									to
-									help
-									set
-									up
-									an
-									HTTPS
-									TLS
-									certificate
-									or
-									Apache
-									virtual
-									hosts
-									<br />
-									<br /><a href="https://www.youtube.com/watch?v=sJd0ir9-jSc" target="_blank"><img
-											style="
-													margin-right: 5px;
-												" src="../src/images/youtube-play-icon-40-40.png" alt="YouTube" /><span class="label">How
-											to
-											Create
-											Self-Signed
-											Certificate
-											in
-											Apache</span></a>
-									<br /><a href="https://www.youtube.com/watch?v=79mOiU3GfnQ" target="_blank"><img
-											style="
-													margin-right: 5px;
-												" src="../src/images/youtube-play-icon-40-40.png" alt="YouTube" /><span class="label">How
-											to
-											Create
-											Virtual
-											Hosts
-											in
-											Apache</span></a>
-									<br /><br /><br />
-									<span class="report-header">Top
-										Menu
-										Bar</span>
-									<br /><br />
-									<span class="label">Home:</span>
-									Takes
-									user
-									to
-									Home
-									page<br />
-									<span class="label">Login/Register:</span>
-									Takes
-									user
-									to
-									Login
-									page<br />
-									<span class="label">Toggle
-										Hints:</span>
-									Shows
-									or
-									hides
-									the
-									Hints
-									on
-									vulnerable
-									pages<br />
-									<span class="label">Toggle
-										Security:</span>
-									Changes
-									the
-									security
-									level
-									between
-									insecure,
-									client-side
-									security
-									and
-									secure<br />
-									<span class="label">Enforce
-										TLS:</span>
-									When
-									enforced,
-									Mutillidae
-									automatically
-									redirects
-									all
-									HTTP
-									requests
-									to
-									HTTPS<br />
-									<span class="label">Reset
-										DB:</span>
-									Drops
-									and
-									rebuilds
-									all
-									database
-									tables
-									and
-									resets
-									the
-									project<br />
-									<span class="label">View
-										Log:</span>
-									Takes
-									the
-									user
-									to
-									view
-									the
-									log<br />
-									<span class="label">View
-										Captured
-										Data:</span>
-									Takes
-									the
-									user
-									to
-									the
-									view
-									the
-									captured
-									data<br />
-									<br /><br />
-									<span class="report-header">Left
-										Menu
-										Bar</span>
-									<br /><br />
-									The
-									menu
-									on
-									the
-									left
-									is
-									organized
-									by
-									category
-									then
-									vulnerability.
-									Some
-									vulnerabilities
-									will
-									be
-									in
-									more
-									than
-									one
-									category
-									as
-									there
-									is
-									overlap
-									between
-									categories.
-									Each
-									page
-									in
-									Mutillidae
-									will
-									expose
-									multiple
-									vulnerabilities.
-									Some
-									pages
-									have
-									half
-									a
-									dozen
-									and/or
-									multiple
-									critical
-									vulnerabilities
-									on
-									the
-									same
-									page.
-									The
-									page
-									will
-									appear
-									in
-									the
-									menu
-									under
-									each
-									vulnerability.
-									<br /><br />
-									A
-									<a title="Listing of vulnerabilities"
-										href="./index.php?page=./documentation/vulnerabilities.php">listing
-										of
-										vulnerabilities</a>
-									is
-									available
-									in
-									menu
-									under
-									documentation
-									or
-									by
-									clicking
-									<a title="Listing of vulnerabilities"
-										href="./index.php?page=./documentation/vulnerabilities.php">here</a>.
-									<br /><br /><br />
-									<span id="videos" class="report-header">Videos</span>
-									<br /><br />
-									The
-									videos
-									on
-									the
-									Webpwnized
-									YouTube
-									Channel
-									are
-									likely
-									to
-									be
-									a
-									some
-									assistance.
-									Videos
-									cover
-									installation,
-									using
-									tools
-									like
-									Burp-Suite
-									and
-									exploits
-									for
-									various
-									vulnerabilities.
-									<br /><br />
-									<a href="http://www.youtube.com/user/webpwnized" target="_blank">
-										<img alt="Webpwnized YouTube Channel"
-											src="../src/images/youtube-play-icon-40-40.png" align="middle" />
-										Video
-										Tutorials
-									</a>
-									<br /><br /><br />
-									<span class="report-header">Page
-										Hints</span>
-									<br /><br />
-									Besides
-									the
-									menus,
-									this
-									will
-									be
-									the
-									most
-									important
-									feature
-									for
-									newcomers.
-									To
-									enable
-									hints,
-									toggle
-									the
-									"Show
-									Hints"
-									button
-									(top
-									menu
-									bar).
-									A
-									hints
-									section
-									will
-									appear
-									IF
-									the
-									page
-									contains
-									vulnerabilities.
-									The
-									Hints
-									are
-									"smart"
-									showing
-									only
-									those
-									hints
-									that
-									will
-									help
-									on
-									the
-									particular
-									page.
-									<br /><br /><br />
-									<span class="report-header">Security
-										Modes</span>
-									<br /><br />
-									Mutillidae
-									currently
-									has
-									three
-									modes:
-									completely
-									insecure,
-									client-side
-									security
-									and
-									secure.
-									In
-									insecure
-									and
-									client-side
-									mode,
-									the
-									pages
-									are
-									vulnerable
-									to
-									at
-									least
-									the
-									topic
-									they
-									fall
-									under
-									in
-									the
-									menu.
-									Note
-									that
-									client-side
-									security
-									mode
-									is
-									just
-									as
-									vulnerable
-									as
-									insecure
-									mode,
-									but
-									JavaScript
-									validation
-									or
-									HTML
-									controls
-									make
-									exploits
-									somewhat
-									more
-									difficult.
-									<br /><br />
-									In
-									secure
-									mode,
-									Mutillidae
-									attempts
-									to
-									protect
-									the
-									pages
-									with
-									server
-									side
-									scripts.
-									Also,
-									hints
-									are
-									disabled.
-									<br /><br />
-									The
-									mode
-									can
-									be
-									changed
-									using
-									the
-									"Toggle
-									Security"
-									button
-									on
-									the
-									top
-									menu
-									bar.
-									<br /><br /><br />
-									<span class="report-header">"Help
-										Me"
-										Button</span>
-									<br /><br />
-									The
-									"Help
-									Me"
-									button
-									provides
-									a
-									basic
-									description
-									of
-									the
-									vulnerabilities
-									on
-									the
-									page
-									for
-									which
-									the
-									user
-									should
-									try
-									exploits.
-									Use
-									this
-									button
-									to
-									get
-									a
-									quick
-									list
-									of
-									issues.
-									Use
-									the
-									Hints
-									to
-									see
-									more
-									details.
-									<br /><br /><br />
-									<span class="report-header">Just
-										give
-										me
-										the
-										exploit</span>
-									<br /><br />
-									Hints
-									will
-									typically
-									provide
-									some
-									exploits.
-									Known
-									exploits
-									that
-									are
-									used
-									in
-									testing
-									Mutillidae
-									are
-									located
-									in
-									/documentation/mutillidae-test-scripts.txt.
-									There
-									is
-									some
-									documentation
-									for
-									each
-									exploit
-									which
-									explains
-									usage
-									and
-									location.
-									<br /><br /><br />
-									<span class="report-header">Be
-										Careful</span>
-									<br /><br />
-									Mutillidae
-									is
-									a
-									"live"
-									system.
-									The
-									vulnerabilities
-									are
-									real
-									rather
-									than
-									emulated.
-									This
-									eliminates
-									the
-									frustration
-									of
-									having
-									to
-									"know
-									what
-									the
-									author
-									wants".
-									Because
-									of
-									this,
-									there
-									are
-									likely
-									undocumented
-									vulnerabilities.
-									Also,
-									this
-									project
-									endangers
-									any
-									machine
-									on
-									which
-									it
-									runs.
-									Best
-									practice
-									is
-									to
-									run
-									Mutillidae
-									in
-									a
-									virtual
-									machine
-									isolated
-									from
-									the
-									network
-									which
-									is
-									only
-									booted
-									when
-									using
-									Mutillidae.
-									Every
-									effort
-									has
-									been
-									made
-									to
-									make
-									Mutillidae
-									ables
-									run
-									entirely
-									off-line.
-									<br /><br /><br />
-									<span class="report-header">Whitepaper</span>
-									<br /><br />
-									A
-									project
-									whitepaper
-									is
-									available
-									to
-									explain
-									the
-									features
-									of
-									Mutillidae
-									and
-									suggested
-									use-cases.
-									<br /><br />
-									<a href="https://www.sans.org/reading-room/whitepapers/application/introduction-owasp-mutillidae-ii-web-pen-test-training-environment-34380"
-										target="_blank"
-										title="Whitepaper: Introduction to OWASP Mutillidae II Web Pen Test Training Environment">
-										<img alt="Webpwnized Twitter Channel" src="../src/images/pdf-icon-48-48.png"
-											align="middle" />
-										Introduction
-										to
-										OWASP
-										Mutillidae
-										II
-										Web
-										Pen
-										Test
-										Training
-										Environment
-									</a>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<!-- End Content -->
-				</td>
-			</tr>
-			<tr class="main-table-frame-dark">
-				<td colspan="2">
-					Browser:
-					䵯穩汬愯㔮〠⡘ㄱ㬠啢畮瑵㬠䱩湵砠砸㙟㘴㬠牶㨹㠮〩⁇散歯⼲〱〰㄰ㄠ䙩牥景砯㤸⸰
-					<br />
-					PHP Version: Not Available
-					(Secure mode doesn't reveal the
-					server version)
-				</td>
-			</tr>
-		</tbody>
-	</table>
-
-	<div id="cboxOverlay" style="display: none"></div>
-	<div id="colorbox" class="" style="
-				display: none;
-				padding-bottom: 42px;
-				padding-right: 42px;
-			">
-		<div id="cboxWrapper">
+	<div class="container">
+		<header>
 			<div>
-				<div id="cboxTopLeft" style="float: left"></div>
-				<div id="cboxTopCenter" style="float: left"></div>
-				<div id="cboxTopRight" style="float: left"></div>
+				<img src="../src/images/coykillericon-50-38.png" />
+				<h2>| MULTIDAE</h2>
 			</div>
-			<div style="clear: left">
-				<div id="cboxMiddleLeft" style="float: left"></div>
-				<div id="cboxContent" style="float: left">
-					<div id="cboxLoadedContent" style="
-								width: 0px;
-								height: 0px;
-								overflow: hidden;
-								float: left;
-							"></div>
-					<div id="cboxTitle" style="float: left"></div>
-					<div id="cboxCurrent" style="float: left"></div>
-					<div id="cboxNext" style="float: left"></div>
-					<div id="cboxPrevious" style="float: left"></div>
-					<div id="cboxSlideshow" style="float: left"></div>
-					<div id="cboxClose" style="float: left"></div>
+			<menu-center></menu-center>
+		</header>
+	</div>
+	<div class="container">
+		<version-center></version-center>
+		<div class="head-version">
+			<div>
+				<h2>OWASP Mutillidae II: Keep Calm and Pwn On</h2>
+			</div>
+			<i>
+				Version: 2.8.78
+				<span>Security Level: 1
+					(Client-Side
+					Security)</span>
+				<span>Hints: Enabled</span>
+				<span>Not Logged In</span>
+			</i>
+
+			<h1>Intruccions</h1>
+		</div>
+	</div>
+	<div class="hero">
+		<div class="container">
+			<div class="hero-index icons">
+				<div>
+					<a href="../index.html">
+						<i class="fa fa-arrow-left" aria-hidden="true"></i>
+						Back
+					</a>
 				</div>
-				<div id="cboxMiddleRight" style="float: left"></div>
+				<div>
+					<a href="#">
+						<i class="fa fa-info-circle" aria-hidden="true"></i> Help
+						Help Me!
+					</a>
+				</div>
 			</div>
-			<div style="clear: left">
-				<div id="cboxBottomLeft" style="float: left"></div>
-				<div id="cboxBottomCenter" style="float: left"></div>
-				<div id="cboxBottomRight" style="float: left"></div>
+			<section class="instructions">
+				<P>Mutillidae implements vulnerabilities from the OWASP Top 10 2013, 2010 and 2007 in PHP. Additionally
+					vulnerabilities from the SANS Top 25 Programming Errors and select information disclosure
+					vulnerabilities have been added on various pages.</P>
+
+
+				<H3>Optional Configuration</h3>
+				<p>Instructional videos are available to help set up an HTTPS TLS certificate or Apache virtual hosts
+				</p>
+
+				<a href="https://www.youtube.com/watch?v=sJd0ir9-jSc">
+					<i class="fa fa-youtube-play"></i>
+					<p>How to Create Self-Signed Certificate in Apache</p>
+				</a>
+				<a href="https://www.youtube.com/watch?v=79mOiU3GfnQ">
+					<i class="fa fa-youtube-play"></i>
+					<p>How to Create Virtual Hosts in Apache</p>
+				</a>
+
+				<h3>
+					Top Menu Bar
+				</h3>
+
+				<ul>
+					<li>Home: Takes user to Home page</li>
+					<li>Login/Register: Takes user to Login page</li>
+					<li>Toggle Hints: Shows or hides the Hints on vulnerable pages</li>
+					<li>Toggle Security: Changes the security level between insecure, client-side security and secure
+					</li>
+					<li>Enforce TLS: When enforced, Mutillidae automatically redirects all HTTP requests to HTTPS</li>
+					<li>Reset DB: Drops and rebuilds all database tables and resets the project</li>
+					<li>View Log: Takes the user to view the log</li>
+					<li>View Captured Data: Takes the user to the view the captured data</li>
+				</ul>
+
+				<h3>Left Menu Bar</h3>
+				<p>
+					The menu on the left is organized by category then vulnerability. Some vulnerabilities will be in
+					more
+					than one category as there is overlap between categories. Each page in Mutillidae will expose
+					multiple
+					vulnerabilities. Some pages have half a dozen and/or multiple critical vulnerabilities on the same
+					page.
+					The page will appear in the menu under each vulnerability.
+				</p>
+
+				<p>A listing of vulnerabilities is available in menu under documentation or by clicking here.</p>
+
+				<h3>Videos</h3>
+
+				<p>
+					The videos on the Webpwnized YouTube Channel are likely to be a some assistance. Videos cover
+					installation, using tools like Burp-Suite and exploits for various vulnerabilities.
+				</p>
+				<a href="https://www.youtube.com/watch?v=sJd0ir9-jSc">
+					<i class="fa fa-youtube-play"></i>
+					<p>Video Tutorials</p>
+				</a>
+
+				<h3>Page Hints</h3>
+				<p>
+					Besides the menus, this will be the most important feature for newcomers. To enable hints, toggle
+					the
+					"Show Hints" button (top menu bar). A hints section will appear IF the page contains
+					vulnerabilities.
+					The Hints are "smart" showing only those hints that will help on the particular page.
+				</p>
+
+
+				<h3>Security Modes</h3>
+				<p>
+					Mutillidae currently has three modes: completely insecure, client-side security and secure. In
+					insecure
+					and client-side mode, the pages are vulnerable to at least the topic they fall under in the menu.
+					Note
+					that client-side security mode is just as vulnerable as insecure mode, but JavaScript validation or
+					HTML
+					controls make exploits somewhat more difficult.
+				</p>
+				<p>
+					In secure mode, Mutillidae attempts to protect the pages with server side scripts. Also, hints are
+					disabled.
+				</p>
+				<p>The mode can be changed using the "Toggle Security" button on the top menu bar.</p>
+
+
+				<h3>"Help Me" Button</h3>
+				<p>
+					The "Help Me" button provides a basic description of the vulnerabilities on the page for which the user
+					should try exploits. Use this button to get a quick list of issues. Use the Hints to see more details.
+				</p>
+
+
+				<h3>Just give me the exploit</h3>
+				<p>
+					Hints will typically provide some exploits. Known exploits that are used in testing Mutillidae are
+					located in /documentation/mutillidae-test-scripts.txt. There is some documentation for each exploit
+					which explains usage and location.
+				</p>
+
+
+				<h3>Be Careful</h3>
+				<p>
+					Mutillidae is a "live" system. The vulnerabilities are real rather than emulated. This eliminates
+					the
+					frustration of having to "know what the author wants". Because of this, there are likely
+					undocumented
+					vulnerabilities. Also, this project endangers any machine on which it runs. Best practice is to run
+					Mutillidae in a virtual machine isolated from the network which is only booted when using
+					Mutillidae.
+					Every effort has been made to make Mutillidae ables run entirely off-line.
+				</p>
+
+
+				<h3>Whitepaper</h3>
+				<p>A project whitepaper is available to explain the features of Mutillidae and suggested use-cases.</p>
+				<p>Webpwnized Twitter Channel Introduction to OWASP Mutillidae II Web Pen Test Training Environment</p>
+			</section>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="footer-col-1">
+				<h2>MULTIDAE</h2>
+				<a href="https://www.paypal.com/donate/?token=yV1V-4pSTNgqz462Zf4R08irjQ8ZJDKQg2_9KxJ1TPzJ-xzUItWTdlMoOZjDI0t3pjze1PUScN7lh7h5"
+					class="btn-donar" target="_blank">Donate</a>
+				Want to Help?
+			</div>
+			<div class="footer-menu">
+				<ul>
+					<li><a href='index.html'>Home</a></li>
+					<li><a href="pages/login.html">Login/Register</a></li>
+					<li><a href="pages/inlogin.html">Toggle Security</a></li>
+					<li><a href="index.html">Enforce TLS</a></li>
+				</ul>
+			</div>
+			<div class="footer-menu footer-menu2">
+				<ul>
+					<li><a href="pages/set-up-database.html">Reset DB</a></li>
+					<li><a href="pages/show-log.html">View Log</a></li>
+					<li><a href="pages/captured-data.html">View Captured Data</a></li>
+				</ul>
+			</div>
+			<div class="footer-col-2">
+				<div>
+					<a href="http://www.youtube.com/user/webpwnized" target="_blank">
+						<i class="fa fa-youtube-play" aria-hidden="true"></i>
+						Video Tutorials
+					</a>
+				</div>
+				<div>
+					<a href="https://twitter.com/webpwnized" target="_blank">
+						<i class="fa fa-twitter" aria-hidden="true"></i>
+						Announcements
+					</a>
+				</div>
+				<div>
+					<a href="https://www.sans.org/reading-room/whitepapers/application/introduction-owasp-mutillidae-ii-web-pen-test-training-environment-34380"
+						target="_blank"
+						title="Whitepaper: Introduction to OWASP Mutillidae II Web Pen Test Training Environment">
+						<i class="fa fa-file-o" aria-hidden="true"></i>
+						Getting Started
+					</a>
+				</div>
 			</div>
 		</div>
-		<div style="
-					position: absolute;
-					width: 9999px;
-					visibility: hidden;
-					display: none;
-				"></div>
+	</footer>
+	<div class="footer-copy">
+		<div class="container">
+			<i>Browser: Mozilla/5.0 </i>
+			<i>SO (X11;Ubuntu; Linux x86_64; rv:98.0)</i>
+			<i>PHP Version: 8.1.4</i>
+			Gecko/20100101 Firefox/98.0<br>
+		</div>
 	</div>
 	<script src="../src/javascript/jQuery/jquery.js"></script>
 	<script src="../src/javascript/jQuery/colorbox/jquery.colorbox-min.js"></script>
-	<script src="../src/javascript/ddsmoothmenu/ddsmoothmenu.js"></script>
 	<script src="../src/javascript/gritter/jquery.gritter.min.js"></script>
 	<script src="../src/javascript/hints/hints-menu.js"></script>
-	<script src="../src/javascript/inline-initializers/jquery-init.js"></script>
-	<script src="../src/javascript/inline-initializers/ddsmoothmenu-init.js"></script>
-	<script src="../src/javascript/inline-initializers/populate-web-storage.js"></script>
-	<script src="../src/javascript/inline-initializers/gritter-init.js"></script>
-	<script src="../src/javascript/inline-initializers/hints-menu-init.js"></script>
+
 	<!-- Web components -->
 	<script src="../src/javascript/componentes/menu-center.js"></script>
-	<script src="../src/javascript/componentes/menu-left.js"></script>
+	<script src="../src/javascript/componentes/version-center.js"></script>
 </body>
 
 </html>
