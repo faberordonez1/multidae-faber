@@ -274,3 +274,6 @@ footer a:hover{
 	background-color: var(--font-secondary);
 	color: var(--fondo-dark);
 }
+.hero{
+	margin:2rem 0;
+}

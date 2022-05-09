@@ -1,254 +1,102 @@
 <html>
 
 <head>
-	<link rel="shortcut icon" href="./../src/images/favicon.ico" type="image/x-icon">
-
-	<link rel="stylesheet" type="text/css" href="../src/styles/global-styles.css" />
-	<link rel="stylesheet" type="text/css" href="../src/styles/ddsmoothmenu/ddsmoothmenu.css" />
-	<link rel="stylesheet" type="text/css" href="../src/javascript/jQuery/colorbox/colorbox.css" />
-	<link rel="stylesheet" type="text/css" href="../src/styles/gritter/jquery.gritter.css" />
+	<link rel="shortcut icon" href="../src/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../src/styles/global-styles.css">
+	<link rel="stylesheet" type="text/css" href="../src/styles/ddsmoothmenu/ddsmoothmenu.css">
+	<link rel="stylesheet" type="text/css" href="../src/javascript/jQuery/colorbox/colorbox.css">
+	<link rel="stylesheet" type="text/css" href="../src/styles/gritter/jquery.gritter.css">
+	<script src="https://kit.fontawesome.com/6e524d64bb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-	<table class="main-table-frame">
-		<tbody>
-			<tr class="main-table-frame-dark">
-				<td class="main-table-frame-first-bar" colspan="2">
-					<img src="../src/images/coykillericon-50-38.png">
-					OWASP Mutillidae II: Keep Calm and Pwn On
-				</td>
-			</tr>
-			<tr class="main-table-frame-dark">
-				<td class="main-table-frame-second-bar" colspan="2">
-					Version: 2.8.78 <span>Security Level: 1 (Client-Side Security)</span>
-					<span>Hints: Enabled</span>
-					<span>Not Logged In</span>
-				</td>
-			</tr>
-			<tr class="main-table-frame-menu-bar">
-				<td class="main-table-frame-menu-bar" colspan="2">
-          <menu-center></menu-center>
-				</td>
-			</tr>
-			<tr>
-        <td class="main-table-frame-left">
-					<menu-left></menu-left>
-				</td>	
-				<td class="main-table-frame-right">
-					<!-- Begin Content -->
-
-					<div class="page-title">Log</div>
-
-
-					<div style="margin: 5px;">
-						<span style="font-weight: bold; margin-right: 50px;">
-							<a id="back-button-anchor">
-								<img src="./../src/images/back-button-64-64.png" alt="Go Back" align="middle">
-								&nbsp;
-								Back
-							</a>
-						</span>
-						<span style="white-space: nowrap; font-weight: bold;"
-							title="Click here to see the primary goal of this page. (Additional vulnerabilities will exist on a page)">
-							<a href="./includes/pop-up-help-context-generator.php?pagename=show-log.html"
-								class="colorbox cboxElement" title="Help me with page show-log.html"
-								style="color: #000000;">
-								<img alt="Help Me!" src="./../src/images/help-easy-button-48-48.png" align="middle">
-								Help Me!
-							</a>
-						</span>
-					</div>
-					<script nonce="">
-						document.addEventListener('DOMContentLoaded', function () {
-							document.getElementById('back-button-anchor').addEventListener('click',
-								function () {
-									document.location.href = 'https://127.0.0.1/mutillidae-master/index.php?popUpNotificationCode=SSLE1&page=home.php';
-								});
-						});
-					</script>
-					<div class="hint-wrapper-header" id="idHintWrapperHeader" title="Click to open this section"
-						style="display: block" ;="">
-						<img id="idHintWrapperHeaderImage" style="padding-right: 5px;" alt="Expand Hints"
-							src="./../src/images/down_arrow_16_16.png" align="left">
-						Hints and Videos
-					</div>
-					<div id="idHintWrapperBody" class="hint-wrapper-body" style="display: none;">
-						<div class="hint-header"><img src="../src/images/link-icon-16-16.png"
-								style="margin-right: 5px;"><a class="hint-header"
-								href="hints-page-wrapper.php?level1HintIncludeFile=12"
-								title="Click to open HTML Injection (HTMLi) hint in new tab" target="_blank">HTML
-								Injection (HTMLi)</a></div>
-						<div class="hint-header"><img src="../src/images/link-icon-16-16.png"
-								style="margin-right: 5px;"><a class="hint-header"
-								href="hints-page-wrapper.php?level1HintIncludeFile=56"
-								title="Click to open Using Burp-Suite hint in new tab" target="_blank">Using
-								Burp-Suite</a></div>
-						<div class="hint-header"><img src="../src/images/link-icon-16-16.png"
-								style="margin-right: 5px;"><a class="hint-header"
-								href="hints-page-wrapper.php?level1HintIncludeFile=59"
-								title="Click to open Using OWASP Zed Attack Proxy (ZAP) hint in new tab"
-								target="_blank">Using OWASP Zed Attack Proxy (ZAP)</a></div>
-						<div class="hint-header"><img src="../src/images/link-icon-16-16.png"
-								style="margin-right: 5px;"><a class="hint-header"
-								href="hints-page-wrapper.php?level1HintIncludeFile=11"
-								title="Click to open Cross-site Scripting (XSS) hint in new tab"
-								target="_blank">Cross-site Scripting (XSS)</a></div>
-						<div class="hint-header"><img src="../src/images/link-icon-16-16.png"
-								style="margin-right: 5px;"><a class="hint-header"
-								href="hints-page-wrapper.php?level1HintIncludeFile=55"
-								title="Click to open Cross-site Scripting with BeEF Framework hint in new tab"
-								target="_blank">Cross-site Scripting with BeEF Framework</a></div>
-					</div>
-					<style>
-						#idLogRecords tr td {
-							border: 1px solid black;
-						}
-
-						#idLogRecords {
-							width: 100%;
-						}
-
-						img {
-							vertical-align: middle;
-						}
-					</style>
-					<table class="results-table" id="idLogRecords">
-						<tbody>
-							<tr class="report-header">
-								<td colspan="10">
-									<span>
-										<img src="./../src/images/information-icon-64-64.png" width="32px"
-											height="32px">
-										6 log records found
-									</span>
-									<span title="Click to refresh log file"
-										onclick="document.location.href=document.location.href.replace('&amp;deleteLogs=deleteLogs','').replace('&amp;popUpNotificationCode=LFD1','').concat('&amp;popUpNotificationCode=LFR1');"
-										style="cursor: pointer;margin-left:35px;margin-right:35px;white-space:nowrap;font-weight:bold;">
-										<img src="./../src/images/refresh-button-48px-by-48px.png" width="32px"
-											height="32px">
-										Refresh Logs
-									</span>
-									<span title="Click to delete log file"
-										onclick="document.location='./index.php?page=show-log.html&amp;deleteLogs=deleteLogs&amp;popUpNotificationCode=LFD1';"
-										style="cursor: pointer;white-space:nowrap;font-weight:bold;">
-										<img src="./../src/images/delete-icon-48-48.png" width="32px" height="32px">
-										Delete Logs
-									</span>
-								</td>
-							</tr>
-							<tr class="report-header">
-								<td style="font-weight:bold;">Hostname</td>
-								<td style="font-weight:bold;">IP</td>
-								<td style="font-weight:bold;">Browser Agent</td>
-								<td style="font-weight:bold;">Message</td>
-								<td style="font-weight:bold;">Date/Time</td>
-							</tr>
-
-							<tr>
-								<td>127.0.0.1</td>
-								<td>127.0.0.1</td>
-								<td>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0</td>
-								<td>User visited: home.php</td>
-								<td>2022-04-06 21:02:11</td>
-							</tr>
-							<tr>
-								<td>127.0.0.1</td>
-								<td>127.0.0.1</td>
-								<td>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0</td>
-								<td>User visited: home.php</td>
-								<td>2022-04-06 21:02:07</td>
-							</tr>
-							<tr>
-								<td>127.0.0.1</td>
-								<td>127.0.0.1</td>
-								<td>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0</td>
-								<td>User visited: home.php</td>
-								<td>2022-04-06 20:57:23</td>
-							</tr>
-							<tr>
-								<td>127.0.0.1</td>
-								<td>127.0.0.1</td>
-								<td>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0</td>
-								<td>User visited: ./documentation/vulnerabilities.html</td>
-								<td>2022-04-06 20:54:16</td>
-							</tr>
-							<tr>
-								<td>127.0.0.1</td>
-								<td>127.0.0.1</td>
-								<td>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0</td>
-								<td>User visited: ./documentation/vulnerabilities.html</td>
-								<td>2022-04-06 20:42:28</td>
-							</tr>
-							<tr>
-								<td>127.0.0.1</td>
-								<td>127.0.0.1</td>
-								<td>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0</td>
-								<td>User visited: home.php</td>
-								<td>2022-04-06 20:41:59</td>
-							</tr>
-						</tbody>
-					</table>
-					<!-- I think the database password is set to blank or perhaps samurai.
-			It depends on whether you installed this web app from irongeeks site or
-			are using it inside Kevin Johnsons Samurai web testing framework.
-			It is ok to put the password in HTML comments because no user will ever see
-			this comment. I remember that security instructor saying we should use the
-			framework comment symbols (ASP.NET, JAVA, PHP, Etc.)
-			rather than HTML comments, but we all know those
-			security instructors are just making all this up. -->
-					<!-- End Content -->
-				</td>
-			</tr>
-			<tr class="main-table-frame-dark">
-				<td colspan="2">
-					Browser: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0 <br>
-					PHP Version: 8.1.4 </td>
-			</tr>
-		</tbody>
-	</table>
-
-	<div id="cboxOverlay" style="display: none;"></div>
-	<div id="colorbox" class="" style="display: none; padding-bottom: 42px; padding-right: 42px;">
-		<div id="cboxWrapper">
+	<div class="container">
+		<header>
 			<div>
-				<div id="cboxTopLeft" style="float: left;"></div>
-				<div id="cboxTopCenter" style="float: left;"></div>
-				<div id="cboxTopRight" style="float: left;"></div>
+				<img src="../src/images/coykillericon-50-38.png" />
+				<h2>| MULTIDAE</h2>
 			</div>
-			<div style="clear: left;">
-				<div id="cboxMiddleLeft" style="float: left;"></div>
-				<div id="cboxContent" style="float: left;">
-					<div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div>
-					<div id="cboxTitle" style="float: left;"></div>
-					<div id="cboxCurrent" style="float: left;"></div>
-					<div id="cboxNext" style="float: left;"></div>
-					<div id="cboxPrevious" style="float: left;"></div>
-					<div id="cboxSlideshow" style="float: left;"></div>
-					<div id="cboxClose" style="float: left;"></div>
-				</div>
-				<div id="cboxMiddleRight" style="float: left;"></div>
-			</div>
-			<div style="clear: left;">
-				<div id="cboxBottomLeft" style="float: left;"></div>
-				<div id="cboxBottomCenter" style="float: left;"></div>
-				<div id="cboxBottomRight" style="float: left;"></div>
-			</div>
-		</div>
-		<div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div>
+			<menu-center></menu-center>
+		</header>
 	</div>
-  <script src="../src/javascript/jQuery/jquery.js"></script>
+	<div class="container">
+		<version-center></version-center>
+		<div class="head-version">
+			<h1>Logs</h1>
+		</div>
+	</div>
+	<div class="hero">
+		<div class="container">
+			<back-button></back-button>
+			<section class="logs">
+				<table>
+					<tbody>
+						<tr class="report-header">
+							<td style="font-weight:bold;">Hostname</td>
+							<td style="font-weight:bold;">IP</td>
+							<td style="font-weight:bold;">Browser Agent</td>
+							<td style="font-weight:bold;">Message</td>
+							<td style="font-weight:bold;">Date/Time</td>
+						</tr>
+				
+						<tr>
+							<td>127.0.0.1</td>
+							<td>127.0.0.1</td>
+							<td>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0</td>
+							<td>User visited: home.php</td>
+							<td>2022-04-06 21:02:11</td>
+						</tr>
+						<tr>
+							<td>127.0.0.1</td>
+							<td>127.0.0.1</td>
+							<td>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0</td>
+							<td>User visited: home.php</td>
+							<td>2022-04-06 21:02:07</td>
+						</tr>
+						<tr>
+							<td>127.0.0.1</td>
+							<td>127.0.0.1</td>
+							<td>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0</td>
+							<td>User visited: home.php</td>
+							<td>2022-04-06 20:57:23</td>
+						</tr>
+						<tr>
+							<td>127.0.0.1</td>
+							<td>127.0.0.1</td>
+							<td>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0</td>
+							<td>User visited: ./documentation/vulnerabilities.html</td>
+							<td>2022-04-06 20:54:16</td>
+						</tr>
+						<tr>
+							<td>127.0.0.1</td>
+							<td>127.0.0.1</td>
+							<td>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0</td>
+							<td>User visited: ./documentation/vulnerabilities.html</td>
+							<td>2022-04-06 20:42:28</td>
+						</tr>
+						<tr>
+							<td>127.0.0.1</td>
+							<td>127.0.0.1</td>
+							<td>Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:98.0) Gecko/20100101 Firefox/98.0</td>
+							<td>User visited: home.php</td>
+							<td>2022-04-06 20:41:59</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</div>
+	</div>
+	<footer-center></footer-center>
+	<script src="../src/javascript/jQuery/jquery.js"></script>
 	<script src="../src/javascript/jQuery/colorbox/jquery.colorbox-min.js"></script>
-	<script src="../src/javascript/ddsmoothmenu/ddsmoothmenu.js"></script>
 	<script src="../src/javascript/gritter/jquery.gritter.min.js"></script>
 	<script src="../src/javascript/hints/hints-menu.js"></script>
-	<script src="../src/javascript/inline-initializers/jquery-init.js"></script>
-	<script src="../src/javascript/inline-initializers/ddsmoothmenu-init.js"></script>
-	<script src="../src/javascript/inline-initializers/populate-web-storage.js"></script>
-	<script src="../src/javascript/inline-initializers/gritter-init.js"></script>
-	<script src="../src/javascript/inline-initializers/hints-menu-init.js"></script>
+
 	<!-- Web components -->
 	<script src="../src/javascript/componentes/menu-center.js"></script>
-	<script src="../src/javascript/componentes/menu-left.js"></script>
+	<script src="../src/javascript/componentes/version-center.js"></script>
+	<script src="../src/javascript/componentes/back-button.js"></script>
+	<script src="../src/javascript/componentes/footer-center.js"></script>
 </body>
 
 </html>

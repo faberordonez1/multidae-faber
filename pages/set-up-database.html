@@ -1,72 +1,91 @@
 <html>
 
 <head>
-  <link rel="shortcut icon" href="./../src/images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="../src/styles/global-styles.css" />
+	<link rel="shortcut icon" href="../src/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../src/styles/global-styles.css">
+	<link rel="stylesheet" type="text/css" href="../src/styles/ddsmoothmenu/ddsmoothmenu.css">
+	<link rel="stylesheet" type="text/css" href="../src/javascript/jQuery/colorbox/colorbox.css">
+	<link rel="stylesheet" type="text/css" href="../src/styles/gritter/jquery.gritter.css">
+	<script src="https://kit.fontawesome.com/6e524d64bb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div>&nbsp;</div>
-  <div class="page-title">Setting up the database...</div><br><br>
-  <div class="label" style="text-align: center;">If you see no error messages, it should be done.</div>
-  <div>&nbsp;</div>
-  <div class="label" style="text-align: center;"><a href="../index.html">Continue back to the frontpage.</a></div>
-  <br>
-  <script>
-    try {
-      window.sessionStorage.clear();
-      window.localStorage.clear();
-    } catch (e) {
-      alert("Error clearing HTML 5 Local and Session Storage" + e.toString());
-    };
-  </script>
-  <div class="database-success-message">HTML 5 Local and Session Storage cleared unless error popped-up already.</div>
-  <div class="database-informative-message">Attempting to connect to MySQL server on host 127.0.0.1 with user name
-    root</div>
-  <div class="database-informative-message">Connected to MySQL server at 127.0.0.1 as root</div>
-  <div class="database-informative-message">Preparing to drop database mutillidae</div>
-  <div class="database-success-message">Executed query 'DROP DATABASE IF EXISTS' for database mutillidae with result 1
-  </div>
-  <div class="database-informative-message">Preparing to create database mutillidae</div>
-  <div class="database-success-message">Executed query 'CREATE DATABASE' for database mutillidae with result 1</div>
-  <div class="database-informative-message">Switching to use database mutillidae</div>
-  <div class="database-informative-message">Executed query 'USE DATABASE' mutillidae with result 1</div>
-  <div class="database-success-message">Executed query 'CREATE TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'CREATE TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'CREATE TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'CREATE TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'INSERT INTO TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'INSERT INTO TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'CREATE TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'INSERT INTO TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'CREATE TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'INSERT INTO TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'CREATE TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'CREATE TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'CREATE TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'INSERT INTO TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'CREATE TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'CREATE TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'CREATE TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'INSERT INTO TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'CREATE TABLE' with result 1</div>
-  <div class="database-success-message">Executed query 'INSERT INTO TABLE' with result 1</div>
-  <div class="database-informative-message">Trying to build XML version of accounts table to update accounts XML
-    data/accounts.xml</div>
-  <div class="database-informative-message">Do not worry. A default version of the file is included if this does not
-    work.</div>
-  <div class="database-informative-message">Trying to build text version of accounts table to update password text
-    file passwords/accounts.txt</div>
-  <div class="database-informative-message">Do not worry. A default version of the file is included if this does not
-    work.</div>
-  <div class="database-success-message">Executed query 'SELECT * FROM accounts'. Found 23 records.</div>
-  <div class="database-warning-message">Could not write accounts XML to data/accounts.xml - Oh snap. Trying to create
-    an XML version of the accounts file did not work out.</div>
-  <div class="database-warning-message">Using default version of accounts.xml</div>
-  <div class="database-warning-message">Could not write accounts XML to passwords/accounts.txt - Oh snap. Trying to
-    create an text version of the accounts file did not work out.</div>
-  <div class="database-warning-message">Using default version of accounts.txt</div>
-  <script>if (confirm("No PHP or MySQL errors were detected when resetting the database.\n\nClick OK to proceed to show-log.html or Cancel to stay on this page.")) { document.location = "show-log.html" };</script>
+	<div class="container">
+		<header>
+			<div>
+				<img src="../src/images/coykillericon-50-38.png" />
+				<h2>| MULTIDAE</h2>
+			</div>
+			<menu-center></menu-center>
+		</header>
+	</div>
+	<div class="container">
+		<version-center></version-center>
+		<div class="head-version">
+			<h1>Reset Database</h1>
+		</div>
+	</div>
+	<div class="hero">
+		<div class="container">
+			<back-button></back-button>
+			<section class="reset-db">
+        <div class="page-title">Setting up the database...</div><br><br>
+        <div class="label" style="text-align: center;">If you see no error messages, it should be done.</div>
+        <div class="label" style="text-align: center;"><a href="../index.html">Continue back to the frontpage.</a></div>
+          <code>
+            HTML 5 Local and Session Storage cleared unless error popped-up already.<br>
+            Attempting to connect to MySQL server on host 127.0.0.1 with user name root<br>
+            Connected to MySQL server at 127.0.0.1 as root<br>
+            Preparing to drop database mutillidae<br>
+            Executed query 'DROP DATABASE IF EXISTS' for database mutillidae with result 1<br>
+            Preparing to create database mutillidae<br>
+            Executed query 'CREATE DATABASE' for database mutillidae with result 1<br>
+            Switching to use database mutillidae<br>
+            Executed query 'USE DATABASE' mutillidae with result 1<br>
+            Executed query 'CREATE TABLE' with result 1<br>
+            Executed query 'CREATE TABLE' with result 1<br>
+            Executed query 'CREATE TABLE' with result 1<br>
+            Executed query 'CREATE TABLE' with result 1<br>
+            Executed query 'INSERT INTO TABLE' with result 1<br>
+            Executed query 'INSERT INTO TABLE' with result 1<br>
+            Executed query 'CREATE TABLE' with result 1<br>
+            Executed query 'INSERT INTO TABLE' with result 1<br>
+            Executed query 'CREATE TABLE' with result 1<br>
+            Executed query 'INSERT INTO TABLE' with result 1<br>
+            Executed query 'CREATE TABLE' with result 1<br>
+            Executed query 'CREATE TABLE' with result 1<br>
+            Executed query 'CREATE TABLE' with result 1<br>
+            Executed query 'INSERT INTO TABLE' with result 1<br>
+            Executed query 'CREATE TABLE' with result 1<br>
+            Executed query 'CREATE TABLE' with result 1<br>
+            Executed query 'CREATE TABLE' with result 1<br>
+            Executed query 'INSERT INTO TABLE' with result 1<br>
+            Executed query 'CREATE TABLE' with result 1<br>
+            Executed query 'INSERT INTO TABLE' with result 1<br>
+            Trying to build XML version of accounts table to update accounts XML data/accounts.xml<br>
+            Do not worry. A default version of the file is included if this does not work.<br>
+            Trying to build text version of accounts table to update password text file passwords/accounts.txt<br>
+            Do not worry. A default version of the file is included if this does not work.<br>
+            Executed query 'SELECT * FROM accounts'. Found 23 records.<br>
+            Could not write accounts XML to data/accounts.xml - Oh snap. Trying to create an XML version of the accounts file did not work out.<br>
+            Using default version of accounts.xml<br>
+            Could not write accounts XML to passwords/accounts.txt - Oh snap. Trying to create an text version of the accounts file did not work out.<br>
+            Using default version of accounts.txt<br>
+        </code>
+			</section>
+		</div>
+	</div>
+	<footer-center></footer-center>
+	<script src="../src/javascript/jQuery/jquery.js"></script>
+	<script src="../src/javascript/jQuery/colorbox/jquery.colorbox-min.js"></script>
+	<script src="../src/javascript/gritter/jquery.gritter.min.js"></script>
+	<script src="../src/javascript/hints/hints-menu.js"></script>
+
+	<!-- Web components -->
+	<script src="../src/javascript/componentes/menu-center.js"></script>
+	<script src="../src/javascript/componentes/version-center.js"></script>
+	<script src="../src/javascript/componentes/back-button.js"></script>
+	<script src="../src/javascript/componentes/footer-center.js"></script>
 </body>
 
 </html>
